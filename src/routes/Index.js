@@ -5,7 +5,7 @@ const favorite = require('./Favorite');
 
 const App = express.Router();
 
-App.use('/movies',movies);
+App.use('/movies', movies);
 App.use('/users', user);
 App.use('/favorites', favorite);
 

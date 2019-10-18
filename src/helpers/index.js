@@ -25,7 +25,7 @@ exports.verifyPassword = async (value, dbPassword) => {
 //generate token
 exports.generateToken = async (payload) => {
   console.log(payload);
-  const token = await jwt.sign(payload, secretOrKey, { expiresIn: '24h'});
+  const token = await jwt.sign(payload, secretOrKey, { expiresIn: '24h' });
   return token;
 };
 

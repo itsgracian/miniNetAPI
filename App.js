@@ -3,10 +3,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const cors = require('cors');
-const routes = require('./routes');
-
-// require database connection
-require('./config/connection');
+const routes = require('./src/routes/Index');
 // configure dotenv
 dotenv.config();
 // initial app

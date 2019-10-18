@@ -60,7 +60,7 @@ exports.auth = async (req, res, next) => {
     next();
   } catch (error) {
     const errorMessage = {
-      error: 'Something wrong please try again'
+      error: 'Failed to authenticate please try again'
     };
     return messageResponse(res, 500, errorMessage);
   }

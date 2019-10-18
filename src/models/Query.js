@@ -45,5 +45,20 @@ class DBQuery {
       throw error;
     }
   }
+  /**
+   *
+   * @param {table} table
+   * @param {column} column
+   * @param {value} value
+   */
+  async deleteByOne(table, column, value) {
+    try {
+      const sql = `DELETE FROM ${table} WHERE ${column} = $1`;
+      const query = await pg.query(sql, [value]);
+      return query;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 module.exports = new DBQuery();

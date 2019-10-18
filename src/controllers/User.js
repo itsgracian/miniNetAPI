@@ -53,10 +53,7 @@ class User {
         return messageResponse(res, 404, errors);
       }
       // check password
-      const checkPassword = await verifyPassword(
-        password,
-        checkEmail.password
-      );
+      const checkPassword = await verifyPassword(password, checkEmail.password);
       const errors = {
         error: 'Authentication failed. email and password are incorrect'
       };
@@ -88,11 +85,12 @@ class User {
    * @return {object}
    */
   LoggedInUser(req, res) {
-      const {username, email, id} = req.user;
-      const user = {
-          username,
-          email
-      }
+    const { username, email, isAdmin } = req.user;
+    const user = {
+      username,
+      email,
+      isAdmin
+    };
     return messageResponse(res, 200, user);
   }
 }

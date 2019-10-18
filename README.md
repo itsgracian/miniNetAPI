@@ -1,2 +1,2 @@
-# ALC-mini-movie-API
+# MiniMovieAPI
 ALC Challenge Build mini netflix APP.

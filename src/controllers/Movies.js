@@ -13,7 +13,6 @@ class Movies {
   async createMovies(req, res) {
     try {
       const { title, imageUrl, director, writter, awards, released } = req.body;
-      const releasedDate = new Date(released);
       const columns = [
         'title',
         'image',
@@ -29,7 +28,7 @@ class Movies {
         director,
         writter,
         awards,
-        releasedDate,
+        released,
         slugify(title.toLowerCase(), '-')
       ];
       // create

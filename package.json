@@ -2,13 +2,13 @@
   "name": "miniNetAPI",
   "version": "1.0.0",
   "description": "miniNetflix API",
-  "main": "index.js",
+  "main": "App.js",
   "repository": "https://github.com/itsgracian/miniNetAPI.git",
   "author": "gratien",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/App.js",
-    "start": "node src/App",
+    "dev": "nodemon App.js",
+    "start": "node App",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "test": "test"
   },
